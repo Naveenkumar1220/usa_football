@@ -21,7 +21,7 @@ class Login extends Component {
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
                             </View>
-                            <FormLogin/>
+                            <FormLogin navigation={this.props.navigation}/>
                         </View>
                     </View>
                 </ImageBackground>

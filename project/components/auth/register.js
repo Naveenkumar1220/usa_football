@@ -21,7 +21,7 @@ class Register extends Component {
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
                             </View>
-                            <FormRegister/>
+                            <FormRegister navigation={this.props.navigation}/>
                         </View>
                     </View>
                 </ImageBackground>

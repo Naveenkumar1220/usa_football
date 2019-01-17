@@ -13,7 +13,7 @@ export class FormLogin extends Component {
                             page={()=>{this.props.navigation.navigate('Register')}}
                             text="Login"
                         />
-                        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Register')}>
+                        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Contact')}>
                             <Text style={styles.register}>Register Now</Text>
                         </TouchableOpacity>
                     </View>
@@ -25,19 +25,6 @@ export class FormLogin extends Component {
 export class FormRegister extends Component {
     render() {
         return (
-            // <View style={styles.formContainer}>
-            //     <ImageBackground source={require("../assets/images/registerbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="contain">
-            //         <View style={styles.loginForm}>
-            //             <TextInput placeholder="Username" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
-            //             <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
-            //             <TextInput placeholder="Confirm Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
-            //             <BtnMedium
-            //                 page={()=>{this.props.navigation.navigate('Register')}}
-            //                 text="Register Now"
-            //             />
-            //         </View>
-            //     </ImageBackground>
-            // </View>
             <View style={styles.formContainer}>
                 <ImageBackground source={require("../assets/images/registerbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="contain">
                     <View style={styles.loginForm}>
@@ -45,8 +32,8 @@ export class FormRegister extends Component {
                         <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
                         <TextInput placeholder="Confirm Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
                         <BtnMedium
-                        page={()=>{this.props.navigation.navigate('Register')}}
-                        text="Register Now"
+                            page={()=>{this.props.navigation.navigate('Home')}}
+                            text="Register Now"
                         />
                     </View>
                 </ImageBackground>

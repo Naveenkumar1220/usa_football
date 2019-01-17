@@ -21,7 +21,7 @@ class Contact extends Component {
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
                             </View>
-                            <FormContact/>
+                            <FormContact navigation={this.props.navigation}/>
                         </View>
                     </View>
                 </ImageBackground>
