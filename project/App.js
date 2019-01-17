@@ -1,56 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, View,DrawerLayoutAndroid, ToolbarAndroid } from 'react-native';
+import AuthStack from './components/auth/index'
+import { Platform, StatusBar,View} from 'react-native';
 import {createStackNavigator} from 'react-navigation';
-const App = createStackNavigator({
-  Home: {screen: HomeScreen},
-  Profile: {screen: ProfileScreen},
-});
+import {Font} from "expo";
+export default class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { loading: true };
+  // }
+  // async componentWillMount() {
+  //   await Font.loadAsync({
+  //     "alternategot": require("./assets/fonts/AlternateGotNo3DOT/AlternateGotNo3DOT.otf"),
+  //     "FiraSans-Regular": require("./assets/fonts/FiraSans/FiraSans-Regular.ttf"),
+  //     "FiraSans-MediumItalic": require("./assets/fonts/FiraSans/FiraSans-MediumItalic.ttf"),
+  //     "FiraSans-LightItalic": require("./assets/fonts/FiraSans/FiraSans-LightItalic.ttf"),
+  //     "FiraSans-Medium": require("./assets/fonts/FiraSans/FiraSans-Medium.ttf"),
+  //     "FiraSans-Light": require("./assets/fonts/FiraSans/FiraSans-Light.ttf"),
+  //     "FiraSans-Italic": require("./assets/fonts/FiraSans/FiraSans-Italic.ttf"),
+  //     "FiraSans-BoldItalic": require("./assets/fonts/FiraSans/FiraSans-BoldItalic.ttf"),
+  //     "FiraSans-Bold": require("./assets/fonts/FiraSans/FiraSans-Bold.ttf")
+  //   });
 
-// export default class App extends React.Component {
-//   // constructor() {
-//   //   super();
-//   //   this.openDrawer = this.openDrawer.bind(this);
-//   // }
- 
-//   // openDrawer() {
-//   //   this.drawer.openDrawer();
-//   // }
-//   render() {
-//     // var drawer = (
-//     //   <View style={{flex: 1, backgroundColor: '#91c988'}}>
-//     //     <Text style={{margin: 20, fontSize: 15, textAlign: 'left'}}>Your buttons here</Text>
-//     //   </View>
-//     // );
-//     return (
-//       <View style={styles.container}>
-//         <Text>Open up App.js to start working on your app!</Text>
-//         <Text style={styles.tilt}></Text>
-//       </View>
-//       // <DrawerLayoutAndroid renderNavigationView={() => drawer} drawerWidth={300}
-//       //   statusBarBackgroundColor='#7faf77' ref={_drawer => (this.drawer = _drawer)}>
-//       //   <ToolbarAndroid style={styles.toolbar} navIcon={require('./assets/hamburger.png')}
-//       //     actions={[{title: 'Settings', show: 'always'}]} onIconClicked={this.openDrawer}/>
-//       // </DrawerLayoutAndroid>
-//     );
-//   }
-// }
+  //   this.setState({ fontLoaded: true });
+  // }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   tilt:{
-//     width:20,
-//     height:150,
-//     transform: [{ rotate: '28deg'}],
-//     backgroundColor:"red"
-
-//   }
-//   // toolbar: {
-//   //   height: 56,
-//   //   backgroundColor: '#699162'
-//   // }
-// });
+  render() {
+    return (
+      <View style={{ paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,flex:1 }}>
+        <AuthStack/>
+      </View>
+    );
+  }
+}
