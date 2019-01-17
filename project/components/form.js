@@ -81,7 +81,7 @@ export class FormContact extends Component {
 const styles = StyleSheet.create({
     bgImage:{
         width:"100%",
-        marginBottom:110,
+        marginBottom:55,
         alignItems:"center",
         borderRadius:5,
         marginRight:18,
