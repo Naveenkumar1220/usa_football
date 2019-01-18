@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     welcome:{
       position:"absolute",
       transform: [{ rotate: '-35deg'}],
-      left:80,
-      top:85
+      left:85,
+      top:105
     },
     textColor:{
       color:"#FFFFFF"
@@ -67,10 +67,12 @@ const styles = StyleSheet.create({
       position:"relative"
     },
     welcomeText:{
-      fontSize:36
+      fontSize:36,
+      fontFamily:"alternategot"
     },
     secondText:{
-      fontSize:21
+      fontSize:21,
+      fontFamily:"alternategot"
     },
     logo:{
         alignItems:"flex-end",

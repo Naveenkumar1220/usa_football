@@ -11,8 +11,8 @@ class Register extends Component {
                     <View style={styles.mainView}>
                         <View style={styles.welcomeBg}>
                             <View style={styles.welcome}>
-                                <Text style={[styles.textColor,styles.welcomeText]}>REGISTER</Text>
-                                <Text style={[styles.textColor,styles.welcomeText]}>NOW</Text>
+                                <Text style={styles.textColor}>REGISTER</Text>
+                                <Text style={styles.textColor}>NOW</Text>
                             </View>
                         </View>
                         <View style={styles.content}>
@@ -53,11 +53,13 @@ const styles = StyleSheet.create({
     welcome:{
       position:"absolute",
       transform: [{ rotate: '-35deg'}],
-      left:80,
-      top:85
+      left:85,
+      top:105
     },
     textColor:{
-      color:"#FFFFFF"
+      color:"#FFFFFF",
+      fontSize:36,
+      fontFamily:"alternategot"
     },
     mainView:{
       backgroundColor:'rgba(0,31,70,0.7)',
@@ -65,9 +67,6 @@ const styles = StyleSheet.create({
       height:"100%",
       flex:1,
       position:"relative"
-    },
-    welcomeText:{
-      fontSize:36
     },
     secondText:{
       fontSize:21
