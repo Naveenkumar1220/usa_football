@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View,ImageBackground,Dimensions,Image } from 'react-native';
+import { StyleSheet, Text, View,ImageBackground,Dimensions,Image,PixelRatio } from 'react-native';
 import {FormRegister} from '../form';
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
@@ -21,7 +21,9 @@ class Register extends Component {
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
                             </View>
-                            <FormRegister navigation={this.props.navigation}/>
+                            <View style={{marginHorizontal:18}}>
+                                <FormRegister navigation={this.props.navigation}/>
+                            </View>
                         </View>
                     </View>
                 </ImageBackground>
@@ -37,28 +39,38 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     bgImage:{
-      width: '100%', 
-      height: '100%',
-      position:"relative"
-    },
-    welcomeBg:{
-      position:"relative",
-      width:devWidth*0.65,
-      height:devHeight*0.65,
-      transform: [{ rotate: '35deg'}],
-      backgroundColor:"#8F0026",
-      left:-100,
-      top:-120
-    },
-    welcome:{
-      position:"absolute",
-      transform: [{ rotate: '-35deg'}],
-      left:85,
-      top:105
-    },
+        width: '100%', 
+        height: '100%',
+      //   position:"relative"
+      },
+      welcomeBg:{
+        position:"relative",
+      //   width:devWidth*0.65,
+      //   height:devHeight*0.65,
+      //   transform: [{ rotate: '35deg'}],
+      //   backgroundColor:"#8F0026",
+      //   left:-100,
+      //   top:-120
+      width: 0,
+      height: 0,
+      backgroundColor: 'transparent',
+      borderStyle: 'solid',
+      borderRightWidth: devWidth*0.5,
+      borderTopWidth: devHeight*0.5,
+      borderRightColor: 'transparent',
+      borderTopColor: '#8F0026'
+      },
+      welcome:{
+        position:"absolute",
+      //   transform: [{ rotate: '-35deg'}],
+      //   left:85,
+        top:-devHeight*0.5,
+        marginTop:16/PixelRatio.get(),
+        marginLeft:17/PixelRatio.get()
+      },
     textColor:{
       color:"#FFFFFF",
-      fontSize:36,
+      fontSize:36/PixelRatio.get(),
       fontFamily:"alternategot"
     },
     mainView:{

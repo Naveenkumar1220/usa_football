@@ -6,7 +6,7 @@ export class FormLogin extends Component {
         return (
             <KeyboardAvoidingView behavior="padding">
                 <View style={styles.formContainer}>
-                    <ImageBackground source={require("../assets/images/loginbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="contain">
+                    <ImageBackground source={require("../assets/images/loginbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                         <View style={styles.loginForm}>
                             <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
                             <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
@@ -29,7 +29,7 @@ export class FormRegister extends Component {
         return (
             <KeyboardAvoidingView behavior="padding">
                 <View style={styles.formContainer}>
-                    <ImageBackground source={require("../assets/images/registerbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="contain">
+                    <ImageBackground source={require("../assets/images/registerbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                         <View style={styles.loginForm}>
                             <TextInput placeholder="Username" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
                             <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
@@ -50,7 +50,7 @@ export class FormContact extends Component {
         return (
             <KeyboardAvoidingView behavior="padding" style={{flex:1}}>
                 <View style={styles.formContainer}>
-                    <ImageBackground source={require("../assets/images/contactbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="contain">
+                    <ImageBackground source={require("../assets/images/contactbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                     <View style={styles.loginForm}>
                         <TextInput placeholder="First Name" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
                         <TextInput placeholder="Last Name" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
@@ -75,10 +75,7 @@ const styles = StyleSheet.create({
     bgImage:{
         width:"100%",
         marginBottom:110,
-        alignItems:"center",
-        borderRadius:5,
-        marginRight:18,
-        marginLeft:18
+        alignItems:"center"
     },
     loginForm:{
         width:"100%",
@@ -92,13 +89,12 @@ const styles = StyleSheet.create({
         paddingBottom:3.2,
         borderColor:"#343741",
         width:"100%",
-        fontFamily:"firasans-regular"
+        fontFamily:"alternategot"
       },
       formContainer:{
           width:"100%",
           position:"relative",
-          alignItems:"center",
-          flex:0
+          alignItems:"center"
       },
       register:{
           borderBottomWidth:0.6,
