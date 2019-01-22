@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,Dimensions,Image} from 'react-native';
 import {FormContact} from '../form';
+import FBFont from '../fonts'
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
 class Contact extends Component {
@@ -9,19 +10,24 @@ class Contact extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require("../../assets/images/bg_image.jpg")} style={styles.bgImage}>
                     <View style={styles.mainView}>
-                        <View style={styles.welcomeBg}>
-                            <View style={styles.welcome}>
-                                <Text style={styles.textColor}>CONTACT</Text>
-                                <Text style={styles.textColor}>INFORMATION</Text>
+                        <View style={{position:"absolute",top:0}}>
+                            <View style={styles.welcomeBg}>
+                                <View style={styles.welcome}>
+                                    <Text style={[styles.textColor,FBFont.alternateMedium(36)]}>CONTACT</Text>
+                                    <Text style={[styles.textColor,,FBFont.alternateMedium(36)]}>INFORMATION</Text>
+                                </View>
                             </View>
                         </View>
                         <View style={styles.content}>
-                            <View style={styles.logo}>
-                                <Image
+                            {/* <View style={styles.logo}>
+                                
+                            </View> */}
+                            <View style={{marginHorizontal:18,flex:1,justifyContent:"flex-end"}}>
+                            <View style={{alignItems:'flex-end',marginBottom:57.5}}>
+                            <Image
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
-                            </View>
-                            <View style={{marginHorizontal:18,flex:1}}>
+                                </View>
                             <FormContact navigation={this.props.navigation}/>
                             </View>
                         </View>
@@ -79,7 +85,6 @@ const styles = StyleSheet.create({
         marginBottom:57.5
     },
     content:{
-        position:"absolute",
         width:"100%",
         flex:1,
         height:Dimensions.get('window').height,

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,Dimensions,Image } from 'react-native';
 import {FormRegister} from '../form';
+import FBFont from '../fonts'
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
 class Register extends Component {
@@ -9,10 +10,12 @@ class Register extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require("../../assets/images/bg_image.jpg")} style={styles.bgImage}>
                     <View style={styles.mainView}>
-                        <View style={styles.welcomeBg}>
-                            <View style={styles.welcome}>
-                                <Text style={styles.textColor}>REGISTER</Text>
-                                <Text style={styles.textColor}>NOW</Text>
+                        <View style={{position:"absolute",top:0}}>
+                            <View style={styles.welcomeBg}>
+                                <View style={styles.welcome}>
+                                    <Text style={[styles.textColor,FBFont.alternateMedium(36)]}>REGISTER</Text>
+                                    <Text style={[styles.textColor,FBFont.alternateMedium(36)]}>NOW</Text>
+                                </View>
                             </View>
                         </View>
                         <View style={styles.content}>
