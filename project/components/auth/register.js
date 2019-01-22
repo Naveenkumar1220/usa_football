@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View,ImageBackground,Dimensions,Image,PixelRatio } from 'react-native';
+import { StyleSheet, Text, View,ImageBackground,Dimensions,Image } from 'react-native';
 import {FormRegister} from '../form';
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
       height: 0,
       backgroundColor: 'transparent',
       borderStyle: 'solid',
-      borderRightWidth: devWidth*0.5,
-      borderTopWidth: devHeight*0.5,
+      borderRightWidth: devWidth*0.55,
+      borderTopWidth: devHeight*0.55,
       borderRightColor: 'transparent',
       borderTopColor: '#8F0026'
       },
@@ -64,13 +64,13 @@ const styles = StyleSheet.create({
         position:"absolute",
       //   transform: [{ rotate: '-35deg'}],
       //   left:85,
-        top:-devHeight*0.5,
-        marginTop:16/PixelRatio.get(),
-        marginLeft:17/PixelRatio.get()
+        top:-devHeight*0.55,
+        marginTop:16,
+        marginLeft:17
       },
     textColor:{
       color:"#FFFFFF",
-      fontSize:36/PixelRatio.get(),
+      fontSize:36,
       fontFamily:"alternategot"
     },
     mainView:{

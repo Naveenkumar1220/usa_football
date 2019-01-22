@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View,ImageBackground,Dimensions,Image,PixelRatio } from 'react-native';
+import { StyleSheet, Text, View,ImageBackground,Dimensions,Image } from 'react-native';
 import {FormLogin} from '../form';
+import FBFont from '../fonts'
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
 class Login extends Component {
@@ -11,7 +12,7 @@ class Login extends Component {
                     <View style={styles.mainView}>
                         <View style={styles.welcomeBg}>
                             <View style={styles.welcome}>
-                                <Text style={[styles.textColor,styles.welcomeText]}>WELCOME</Text>
+                                <Text style={[styles.textColor,FBFont.alternateMedium(36)]}>WELCOME</Text>
                                 <Text style={[styles.textColor,styles.secondText]}>Let's Get Started</Text>
                             </View>
                         </View>
@@ -55,8 +56,8 @@ const styles = StyleSheet.create({
       height: 0,
       backgroundColor: 'transparent',
       borderStyle: 'solid',
-      borderRightWidth: devWidth*0.5,
-      borderTopWidth: devHeight*0.5,
+      borderRightWidth: devWidth*0.55,
+      borderTopWidth: devHeight*0.55,
       borderRightColor: 'transparent',
       borderTopColor: '#8F0026'
       },
@@ -64,9 +65,9 @@ const styles = StyleSheet.create({
         position:"absolute",
       //   transform: [{ rotate: '-35deg'}],
       //   left:85,
-        top:-devHeight*0.5,
-        marginTop:16/PixelRatio.get(),
-        marginLeft:17/PixelRatio.get()
+        top:-devHeight*0.55,
+        marginTop:16,
+        marginLeft:17
       },
     textColor:{
       color:"#FFFFFF"
@@ -79,11 +80,11 @@ const styles = StyleSheet.create({
       position:"relative"
     },
     welcomeText:{
-      fontSize:36/PixelRatio.get(),
+      fontSize:36,
       fontFamily:"alternategot"
     },
     secondText:{
-      fontSize:21/PixelRatio.get(),
+      fontSize:21,
       fontFamily:"alternategot"
     },
     logo:{
