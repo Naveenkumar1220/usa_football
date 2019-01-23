@@ -25,7 +25,7 @@ class Contact extends Component {
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
                             </View>
-                            <View style={{marginHorizontal:18,flex:1,justifyContent:"flex-end"}}>
+                            <View style={{marginHorizontal:18,justifyContent:"flex-end"}}>
                                 <FormContact navigation={this.props.navigation}/>
                             </View>
                         </View>

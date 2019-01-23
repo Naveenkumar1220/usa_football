@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,TextInput,TouchableOpacity,KeyboardAvoidingView } from 'react-native';
 import { BtnMedium } from "./buttons";
-import {INPUT_BORDER} from './colors'
+import {INPUT_BORDER} from './colors';
 export class FormLogin extends Component {
     render() {
         return (
@@ -49,7 +49,7 @@ export class FormRegister extends Component {
 export class FormContact extends Component {
     render() {
         return (
-            <KeyboardAvoidingView behavior="padding" style={{flex:1}}>
+            <KeyboardAvoidingView behavior="padding" style={{justifyContent:'flex-end'}}>
                 <View style={styles.formContainer}>
                     <ImageBackground source={require("../assets/images/contactbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                     <View style={styles.loginForm}>
@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
       formContainer:{
           width:"100%",
           position:"relative",
-          alignItems:"center"
+          alignItems:"center",
+          justifyContent:"flex-end"
       },
       register:{
           borderBottomWidth:0.6,
