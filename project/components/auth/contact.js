@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,Dimensions,Image} from 'react-native';
 import {FormContact} from '../form';
-import FBFont from '../fonts'
+import FBFont from '../fonts';
+import {DEFAULT_WHITE,MAROON} from '../colors';
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
 class Contact extends Component {
@@ -19,16 +20,13 @@ class Contact extends Component {
                             </View>
                         </View>
                         <View style={styles.content}>
-                            {/* <View style={styles.logo}>
-                                
-                            </View> */}
-                            <View style={{marginHorizontal:18,flex:1,justifyContent:"flex-end"}}>
-                            <View style={{alignItems:'flex-end',marginBottom:57.5}}>
-                            <Image
+                            <View style={styles.logo}>
+                                <Image
                                     source={require("../../assets/images/usaf_logo.png")}                                
                                 />
-                                </View>
-                            <FormContact navigation={this.props.navigation}/>
+                            </View>
+                            <View style={{marginHorizontal:18,flex:1,justifyContent:"flex-end"}}>
+                                <FormContact navigation={this.props.navigation}/>
                             </View>
                         </View>
                     </View>
@@ -40,7 +38,7 @@ class Contact extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: DEFAULT_WHITE,
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
         borderRightWidth: devWidth*0.55,
         borderTopWidth: devHeight*0.55,
         borderRightColor: 'transparent',
-        borderTopColor: '#8F0026'
+        borderTopColor: MAROON
       },
       welcome:{
         position:"absolute",
@@ -66,7 +64,7 @@ const styles = StyleSheet.create({
         marginLeft:17
       },
     textColor:{
-      color:"#FFFFFF",
+      color:DEFAULT_WHITE,
       fontSize:36,
       fontFamily:"alternategot"
     },

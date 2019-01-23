@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
+import {DEFAULT_WHITE,MAROON} from './colors';
 export class BtnMedium extends Component {
     render() {
         return (
@@ -13,7 +14,7 @@ export class BtnMedium extends Component {
 }
 const styles=StyleSheet.create({
     btnMedium:{
-        backgroundColor:"#8f0026",
+        backgroundColor:MAROON,
         width:170,
         height:43,
         justifyContent:"center",
@@ -23,6 +24,6 @@ const styles=StyleSheet.create({
     btnText:{
         fontSize:18,
         textAlign:"center",
-        color:"#FFFFFF"
+        color:DEFAULT_WHITE
     }
 })

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,Dimensions,Image } from 'react-native';
 import {FormLogin} from '../form';
-import FBFont from '../fonts'
+import FBFont from '../fonts';
+import {DEFAULT_WHITE,MAROON} from '../colors'
 const devWidth= Dimensions.get('window').width
 const devHeight= Dimensions.get('window').height
 class Login extends Component {
@@ -37,7 +38,7 @@ class Login extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: DEFAULT_WHITE,
       alignItems: 'center',
       justifyContent: 'center'
     },
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
       borderRightWidth: devWidth*0.55,
       borderTopWidth: devHeight*0.55,
       borderRightColor: 'transparent',
-      borderTopColor: '#8F0026'
+      borderTopColor: MAROON
       },
       welcome:{
         position:"absolute",
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
         marginLeft:17
       },
     textColor:{
-      color:"#FFFFFF"
+      color:DEFAULT_WHITE
     },
     mainView:{
       backgroundColor:'rgba(0,31,70,0.7)',

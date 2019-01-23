@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View,ImageBackground,TextInput,TouchableOpacity,KeyboardAvoidingView } from 'react-native';
 import { BtnMedium } from "./buttons";
+import {INPUT_BORDER} from './colors'
 export class FormLogin extends Component {
     render() {
         return (
@@ -8,8 +9,8 @@ export class FormLogin extends Component {
                 <View style={styles.formContainer}>
                     <ImageBackground source={require("../assets/images/loginbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                         <View style={styles.loginForm}>
-                            <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
-                            <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true}></TextInput>
+                            <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={styles.txtInput} allowFontScaling={false}></TextInput>
+                            <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true} allowFontScaling={false}></TextInput>
                             <BtnMedium
                                 page={()=>{this.props.navigation.navigate('Register')}}
                                 text="Login"
@@ -31,9 +32,9 @@ export class FormRegister extends Component {
                 <View style={styles.formContainer}>
                     <ImageBackground source={require("../assets/images/registerbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                         <View style={styles.loginForm}>
-                            <TextInput placeholder="Username" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
-                            <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true}></TextInput>
-                            <TextInput placeholder="Confirm Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true}></TextInput>
+                            <TextInput placeholder="Username" placeholderTextColor="#343741" style={styles.txtInput} allowFontScaling={false}></TextInput>
+                            <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true} allowFontScaling={false}></TextInput>
+                            <TextInput placeholder="Confirm Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true} allowFontScaling={false}></TextInput>
                             <BtnMedium
                                 page={()=>{this.props.navigation.navigate('Home')}}
                                 text="Register Now"
@@ -52,11 +53,11 @@ export class FormContact extends Component {
                 <View style={styles.formContainer}>
                     <ImageBackground source={require("../assets/images/contactbg.png")} style={styles.bgImage} imageStyle={{borderRadius:5}} resizeMode="stretch">
                     <View style={styles.loginForm}>
-                        <TextInput placeholder="First Name" placeholderTextColor="#343741" style={styles.txtInput}></TextInput>
-                        <TextInput placeholder="Last Name" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
-                        <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
-                        <TextInput placeholder="Birthdate" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
-                        <TextInput placeholder="Mobile Number" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]}></TextInput>
+                        <TextInput placeholder="First Name" placeholderTextColor="#343741" style={styles.txtInput} allowFontScaling={false}></TextInput>
+                        <TextInput placeholder="Last Name" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} allowFontScaling={false}></TextInput>
+                        <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} allowFontScaling={false}></TextInput>
+                        <TextInput placeholder="Birthdate" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} allowFontScaling={false}></TextInput>
+                        <TextInput placeholder="Mobile Number" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} allowFontScaling={false}></TextInput>
                         <BtnMedium
                             page={()=>{this.props.navigation.navigate('Register')}}
                             text="Next"
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
       txtInput:{
         borderBottomWidth:0.3,
         paddingBottom:3.2,
-        borderColor:"#343741",
+        borderColor:INPUT_BORDER,
         width:"100%",
         fontFamily:"alternategot"
       },
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
       },
       register:{
           borderBottomWidth:0.6,
-          borderColor:"#343741",
+          borderColor:INPUT_BORDER,
           paddingBottom:1,
           fontSize:10,
           marginTop:12.5
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
       },
       loginNow:{
         borderBottomWidth:0.6,
-        borderColor:"#343741",
+        borderColor:INPUT_BORDER,
         paddingBottom:1
       },
       bottomText:{
