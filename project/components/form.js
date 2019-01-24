@@ -12,7 +12,7 @@ export class FormLogin extends Component {
                             <TextInput placeholder="Email Address" placeholderTextColor="#343741" style={styles.txtInput} allowFontScaling={false}></TextInput>
                             <TextInput placeholder="Password" placeholderTextColor="#343741" style={[styles.txtInput,styles.pswd]} secureTextEntry={true} allowFontScaling={false}></TextInput>
                             <BtnMedium
-                                page={()=>{this.props.navigation.navigate('Register')}}
+                                page={()=>{this.props.navigation.navigate('Home')}}
                                 text="Login"
                             />
                             <TouchableOpacity onPress={()=>this.props.navigation.navigate('Contact')}>

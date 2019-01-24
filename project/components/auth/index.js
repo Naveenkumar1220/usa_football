@@ -7,10 +7,11 @@ import Home from "./home"
 
 const AuthComponent = createStackNavigator(
     { 
+        Home:{screen:Home},
         Login:{screen:Login},
         Register:{screen:Register},
         Contact:{screen:Contact},
-        Home:{screen:Home}
+        
     },
     {
         headerMode:"none"

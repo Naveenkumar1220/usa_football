@@ -14,7 +14,7 @@ var FBFont = {
     alternateMedium(size: Number) {
       return {
         fontFamily : 'alternategot',
-        fontSize : getSize(size)
+        fontSize : size
       };
     },
   };
