@@ -44,30 +44,21 @@ const styles = StyleSheet.create({
     },
     bgImage:{
         width: '100%', 
-        height: '100%',
-      //   position:"relative"
+        height: '100%'
       },
       welcomeBg:{
         position:"relative",
-      //   width:devWidth*0.65,
-      //   height:devHeight*0.65,
-      //   transform: [{ rotate: '35deg'}],
-      //   backgroundColor:"#8F0026",
-      //   left:-100,
-      //   top:-120
-      width: 0,
-      height: 0,
-      backgroundColor: 'transparent',
-      borderStyle: 'solid',
-      borderRightWidth: devWidth*0.55,
-      borderTopWidth: devHeight*0.55,
-      borderRightColor: 'transparent',
-      borderTopColor: MAROON
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderRightWidth: devWidth*0.55,
+        borderTopWidth: devHeight*0.55,
+        borderRightColor: 'transparent',
+        borderTopColor: MAROON
       },
       welcome:{
         position:"absolute",
-      //   transform: [{ rotate: '-35deg'}],
-      //   left:85,
         top:-devHeight*0.55,
         marginTop:16,
         marginLeft:17
