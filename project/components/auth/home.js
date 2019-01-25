@@ -18,7 +18,7 @@ class Home extends Component{
                     </View>
                 </View>
                 <ScrollView>
-                    <View style={styles.eventCard}>
+                <View style={styles.eventCard}>
                         <View style={styles.imageContainer}>
                             <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
                             <View style={styles.invite}>
@@ -34,19 +34,31 @@ class Home extends Component{
                                     <Text style={[commonStyles.txtWrap,styles.eventName]}>MIDDLE SCHOOL BOWL GAME SERIES</Text>
                                 </View>
                                 <View style={commonStyles.row}>
-                                    <Image source={require("../../assets/images/location.png")} style={{width:7.1,height:10.3}} resizeMode="contain"/>
+                                    <Image source={require("../../assets/images/location.png")} style={{marginTop:3,width:10,height:16}} resizeMode="contain"/>
                                     <Text style={[commonStyles.txtWrap,styles.txt]}>High School Training Camp - Canton</Text>
                                 </View>
                             </View>
                             <View style={styles.dateTime}>
-                                <View style={commonStyles.row}>
-                                    <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2}}/>
+                                <View style={[commonStyles.row,styles.imgText]}>
+                                    <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
                                     <Text style={[commonStyles.txtWrap,styles.txt]}>Dec 28 & 29, 2019</Text>
                                 </View>
-                                <View style={commonStyles.row}>
-                                    <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2}}/>
+                                <View style={[commonStyles.row,styles.imgText]}>
+                                    <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
                                     <Text style={[commonStyles.txtWrap,styles.txt]}>08:00 am - 02:00 pm</Text>
                                 </View>
+                            </View>
+                        </View>
+                        <View style={commonStyles.row}>
+                            <View style={styles.bgColor}>
+                                <View style={[commonStyles.row,{alignItems:"center"}]}>
+                                    <Text style={[styles.bottomText,{fontSize:25}]}>$ 80 </Text>
+                                    <Text style={styles.bottomText}> PER ATHLETE</Text>
+                                </View>
+                            </View>
+                            <View style={styles.line}></View>
+                            <View style={styles.bgColor}>
+                                <Text style={styles.bottomText}>Register Now</Text>
                             </View>
                         </View>
                     </View>
@@ -108,7 +120,7 @@ const styles=StyleSheet.create({
     },
     invite:{
         position:"absolute",
-        right:18
+        right:9
     },
     inviteOnly:{
         flexDirection:"row",
@@ -138,6 +150,27 @@ const styles=StyleSheet.create({
     },
     txt:{
         marginLeft:6
+    },
+    imgText:{
+        marginTop:10
+    },
+    bottom:{
+
+    },
+    bgColor:{
+        backgroundColor:MAROON,
+        padding:3,
+        width:"49.5%",
+        alignItems:"center",
+        justifyContent:"center"
+    },
+    line:{
+        width:1,
+        height:"100%",
+        backgroundColor:DEFAULT_WHITE
+    },
+    bottomText:{
+        color:DEFAULT_WHITE
     }
 });
 export default Home
