@@ -17,52 +17,142 @@ class Home extends Component{
                         <Text style={styles.txtColor}>Search</Text>
                     </View>
                 </View>
-                <ScrollView>
-                <View style={styles.eventCard}>
-                        <View style={styles.imageContainer}>
-                            <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
-                            <View style={styles.invite}>
-                                <View style={styles.inviteOnly}>
-                                    <Image source={require("../../assets/images/invite.png")} style={{width:16.2,height:15.6}}/>
-                                    <Text style={styles.inviteText}>Invite only</Text>
+                <View style={{flex:1}}>
+                    <ScrollView pagingEnabled={false}>
+                        <View style={styles.eventCard}>
+                            <View style={styles.imageContainer}>
+                                <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
+                                <View style={styles.invite}>
+                                    <View style={styles.inviteOnly}>
+                                        <Image source={require("../../assets/images/invite.png")} style={{width:16.2,height:15.6}}/>
+                                        <Text style={styles.inviteText}>Invite only</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={styles.eventDetails}>
+                                <View style={styles.nameLocation}>
+                                    <View>
+                                        <Text style={[commonStyles.txtWrap,styles.eventName]}>MIDDLE SCHOOL BOWL GAME SERIES</Text>
+                                    </View>
+                                    <View style={commonStyles.row}>
+                                        <Image source={require("../../assets/images/location.png")} style={{marginTop:3,width:10,height:16}} resizeMode="contain"/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>High School Training Camp - Canton</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.dateTime}>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>Dec 28 & 29, 2019</Text>
+                                    </View>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>08:00 am - 02:00 pm</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={commonStyles.row}>
+                                <View style={styles.bgColor}>
+                                    <View style={[commonStyles.row,{alignItems:"center"}]}>
+                                        <Text style={[styles.bottomText,{fontSize:25}]}>$ 80 </Text>
+                                        <Text style={styles.bottomText}>PER ATHLETE</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.line}></View>
+                                <View style={styles.bgColor}>
+                                    <Text style={styles.bottomText}>Register Now</Text>
                                 </View>
                             </View>
                         </View>
-                        <View style={styles.eventDetails}>
-                            <View style={styles.nameLocation}>
-                                <View>
-                                    <Text style={[commonStyles.txtWrap,styles.eventName]}>MIDDLE SCHOOL BOWL GAME SERIES</Text>
-                                </View>
-                                <View style={commonStyles.row}>
-                                    <Image source={require("../../assets/images/location.png")} style={{marginTop:3,width:10,height:16}} resizeMode="contain"/>
-                                    <Text style={[commonStyles.txtWrap,styles.txt]}>High School Training Camp - Canton</Text>
+                        <View style={styles.eventCard}>
+                            <View style={styles.imageContainer}>
+                                <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
+                                <View style={styles.invite}>
+                                    <View style={styles.inviteOnly}>
+                                        <Image source={require("../../assets/images/invite.png")} style={{width:16.2,height:15.6}}/>
+                                        <Text style={styles.inviteText}>Invite only</Text>
+                                    </View>
                                 </View>
                             </View>
-                            <View style={styles.dateTime}>
-                                <View style={[commonStyles.row,styles.imgText]}>
-                                    <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
-                                    <Text style={[commonStyles.txtWrap,styles.txt]}>Dec 28 & 29, 2019</Text>
+                            <View style={styles.eventDetails}>
+                                <View style={styles.nameLocation}>
+                                    <View>
+                                        <Text style={[commonStyles.txtWrap,styles.eventName]}>MIDDLE SCHOOL BOWL GAME SERIES</Text>
+                                    </View>
+                                    <View style={commonStyles.row}>
+                                        <Image source={require("../../assets/images/location.png")} style={{marginTop:3,width:10,height:16}} resizeMode="contain"/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>High School Training Camp - Canton</Text>
+                                    </View>
                                 </View>
-                                <View style={[commonStyles.row,styles.imgText]}>
-                                    <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
-                                    <Text style={[commonStyles.txtWrap,styles.txt]}>08:00 am - 02:00 pm</Text>
+                                <View style={styles.dateTime}>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>Dec 28 & 29, 2019</Text>
+                                    </View>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>08:00 am - 02:00 pm</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={commonStyles.row}>
+                                <View style={styles.bgColor}>
+                                    <View style={[commonStyles.row,{alignItems:"center"}]}>
+                                        <Text style={[styles.bottomText,{fontSize:25}]}>$ 80 </Text>
+                                        <Text style={styles.bottomText}>PER ATHLETE</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.line}></View>
+                                <View style={styles.bgColor}>
+                                    <Text style={styles.bottomText}>Register Now</Text>
                                 </View>
                             </View>
                         </View>
-                        <View style={commonStyles.row}>
-                            <View style={styles.bgColor}>
-                                <View style={[commonStyles.row,{alignItems:"center"}]}>
-                                    <Text style={[styles.bottomText,{fontSize:25}]}>$ 80 </Text>
-                                    <Text style={styles.bottomText}> PER ATHLETE</Text>
+                        <View style={styles.eventCard}>
+                            <View style={styles.imageContainer}>
+                                <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
+                                <View style={styles.invite}>
+                                    <View style={styles.inviteOnly}>
+                                        <Image source={require("../../assets/images/invite.png")} style={{width:16.2,height:15.6}}/>
+                                        <Text style={styles.inviteText}>Invite only</Text>
+                                    </View>
                                 </View>
                             </View>
-                            <View style={styles.line}></View>
-                            <View style={styles.bgColor}>
-                                <Text style={styles.bottomText}>Register Now</Text>
+                            <View style={styles.eventDetails}>
+                                <View style={styles.nameLocation}>
+                                    <View>
+                                        <Text style={[commonStyles.txtWrap,styles.eventName]}>MIDDLE SCHOOL BOWL GAME SERIES</Text>
+                                    </View>
+                                    <View style={commonStyles.row}>
+                                        <Image source={require("../../assets/images/location.png")} style={{marginTop:3,width:10,height:16}} resizeMode="contain"/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>High School Training Camp - Canton</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.dateTime}>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/calender.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>Dec 28 & 29, 2019</Text>
+                                    </View>
+                                    <View style={[commonStyles.row,styles.imgText]}>
+                                        <Image source={require("../../assets/images/time.png")} style={{width:15.2,height:15.2,marginTop:3}}/>
+                                        <Text style={[commonStyles.txtWrap,styles.txt]}>08:00 am - 02:00 pm</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={commonStyles.row}>
+                                <View style={styles.bgColor}>
+                                    <View style={[commonStyles.row,{alignItems:"center"}]}>
+                                        <Text style={[styles.bottomText,{fontSize:25}]}>$ 80 </Text>
+                                        <Text style={styles.bottomText}>PER ATHLETE</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.line}></View>
+                                <View style={styles.bgColor}>
+                                    <Text style={styles.bottomText}>Register Now</Text>
+                                </View>
                             </View>
                         </View>
-                    </View>
-                </ScrollView>
+                    </ScrollView>
+                </View>
             </View>
         );
     }
@@ -111,9 +201,11 @@ const styles=StyleSheet.create({
     eventCard:{
         shadowColor:SHADOW_COLOR,
         shadowOffset:{width:0,height:8},
-        shadowOpacity:10,
+        shadowOpacity:0.1,
         shadowRadius:0,
-        elevation:2
+        elevation:1,
+        marginBottom:30,
+        backgroundColor:"#FFFFFF"
     },
     imageContainer:{
         position:"relative"
