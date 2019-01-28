@@ -18,7 +18,7 @@ class Home extends Component{
                     </View>
                 </View>
                 <View style={{flex:1}}>
-                    <ScrollView pagingEnabled={false}>
+                    <ScrollView showsVerticalScrollIndicator={false}>
                         <View style={styles.eventCard}>
                             <View style={styles.imageContainer}>
                                 <Image source={require("../../assets/images/usa_can.jpg")} style={{width:"100%",height:130,flex:1,borderTopLeftRadius:5,borderTopRightRadius:5}} resizeMode="cover"/>
@@ -160,8 +160,7 @@ class Home extends Component{
 const styles=StyleSheet.create({
     mainContainer:{
         flex:1,
-        alignItems:"center",
-        marginHorizontal:13
+        alignItems:"center"
     },
     headerStyle:{
         marginTop:15,
@@ -169,10 +168,10 @@ const styles=StyleSheet.create({
     },
     searchContainer:{
         height:35,
-        width:"100%",
         marginBottom:25,
         flexDirection:"row",
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        marginHorizontal:13
     },
     iconText:{
         flexDirection:"row",
@@ -201,18 +200,20 @@ const styles=StyleSheet.create({
     eventCard:{
         shadowColor:SHADOW_COLOR,
         shadowOffset:{width:0,height:8},
-        shadowOpacity:0.1,
+        shadowOpacity:10,
         shadowRadius:0,
-        elevation:1,
+        elevation:10,
         marginBottom:30,
-        backgroundColor:"#FFFFFF"
+        backgroundColor:DEFAULT_WHITE,
+        marginHorizontal:13,
+        paddingBottom:7
     },
     imageContainer:{
         position:"relative"
     },
     invite:{
         position:"absolute",
-        right:9
+        right:0
     },
     inviteOnly:{
         flexDirection:"row",
@@ -228,7 +229,7 @@ const styles=StyleSheet.create({
         width:"100%",
         flexDirection:"row",
         justifyContent:"space-between",
-        paddingVertical:7,
+        paddingTop:7,
         paddingHorizontal:10
     },
     nameLocation:{
