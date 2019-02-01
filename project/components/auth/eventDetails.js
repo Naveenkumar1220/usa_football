@@ -51,7 +51,7 @@ class EventDetails extends Component{
                         <Text style={styles.eventDesc}>
                             It may be America’s sport, but competition comes from all over the world. Come see the top football players from the U.S.,Mexico, Japan, Canada, Panama and more compete at the tenth annual International Bowl. It may be America’s sport, but competition comes from all over the world. 
                         </Text>
-                        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Register')}>
+                        <TouchableOpacity onPress={()=>this.props.navigation.navigate('MemberSelect')}>
                             <View>
                                 <Text style={styles.registerNow}>Register Now</Text>
                             </View>

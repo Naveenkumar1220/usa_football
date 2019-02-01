@@ -18,10 +18,21 @@ export class BtnAdd extends Component {
         return (
             <TouchableOpacity onPress={this.props.page}>
                 <View style={[commonStyles.row,styles.btnAdd]} height={this.props.height}>
-                    <Image source={require("../assets/images/add_another.png")} style={{width:12.7,height:17.3}} resizeMode="cover"/>
+                    <Image source={this.props.image} style={{width:15,height:19}} resizeMode="cover"/>
                     <Text style={[styles.addText,styles.btnText]}>{this.props.text}</Text>
                 </View>
             </TouchableOpacity>
+        );
+    }
+}
+export class BtnNext extends Component{
+    render(){
+        return(
+            <TouchableOpacity onPress={this.props.page}>
+                <View style={styles.btnNext} height={this.props.height}>
+                    <Text style={styles.btnText}>{this.props.text}</Text>
+                </View>
+            </TouchableOpacity> 
         );
     }
 }
@@ -35,7 +46,7 @@ const styles=StyleSheet.create({
         marginTop:25.5
     },
     btnText:{
-        fontSize:18,
+        fontSize:16,
         textAlign:"center",
         color:DEFAULT_WHITE
     },
@@ -50,5 +61,12 @@ const styles=StyleSheet.create({
     addText:{
         fontSize:12,
         marginLeft:5.7
+    },
+    btnNext:{
+        backgroundColor:MAROON,
+        width:101,
+        borderRadius:5,
+        justifyContent:"center",
+        alignItems:"center"
     }
 })

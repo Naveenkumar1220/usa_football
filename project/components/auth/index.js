@@ -6,15 +6,23 @@ import Contact from "./contact"
 import Home from "./home"
 import EventDetails from "./eventDetails"
 import MemberSelect from "./memberSelect"
+import PaymentInfo from "./paymentInfo"
+import RegReview from "./regReview"
+import PaymentComplete from "./paymentComplete"
+import MyEvents from "./myEvents"
 
 const AuthComponent = createStackNavigator(
-    { 
-        MemberSelect:{screen:MemberSelect},
-        Home:{screen:Home},
+    {   
         Login:{screen:Login},
-        Register:{screen:Register},
         Contact:{screen:Contact},
-        EventDetails:{screen:EventDetails}
+        Register:{screen:Register},
+        Home:{screen:Home},
+        EventDetails:{screen:EventDetails},
+        MemberSelect:{screen:MemberSelect},
+        PaymentInfo:{screen:PaymentInfo},
+        RegReview:{screen:RegReview},
+        MyEvents:{screen:MyEvents},
+        PaymentComplete:{screen:PaymentComplete}
     },
     {
         headerMode:"none"

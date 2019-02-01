@@ -62,9 +62,12 @@ export class FormContact extends Component {
                             page={()=>{this.props.navigation.navigate('Register')}}
                             text="Next"
                         />
-                        <Text style={styles.bottomText}>
-                            <Text>Already have an account </Text><Text style={styles.loginNow}>Login Now</Text>
-                        </Text>
+                        <View style={[styles.bottomText,commonStyles.row]}>
+                            <Text>Already have an account </Text>
+                            <TouchableOpacity onPress={()=>{this.props.navigation.navigate("Login")}}>
+                                <Text style={styles.loginNow}>Login Now</Text>
+                            </TouchableOpacity>
+                        </View>
                         </View>
                     </ImageBackground>
                 </View>
@@ -75,7 +78,7 @@ export class FormContact extends Component {
 const styles = StyleSheet.create({
     bgImage:{
         width:"100%",
-        marginBottom:110,
+        marginBottom:55,
         alignItems:"center"
     },
     loginForm:{
@@ -90,7 +93,8 @@ const styles = StyleSheet.create({
         paddingBottom:3.2,
         borderColor:INPUT_BORDER,
         width:"100%",
-        fontFamily:"alternategot"
+        fontFamily:"alternategot",
+        fontSize:16
       },
       formContainer:{
           width:"100%",
@@ -102,7 +106,7 @@ const styles = StyleSheet.create({
           borderBottomWidth:0.6,
           borderColor:INPUT_BORDER,
           paddingBottom:1,
-          fontSize:10,
+          fontSize:14,
           marginTop:12.5
       },
       pswd:{
@@ -114,7 +118,7 @@ const styles = StyleSheet.create({
         paddingBottom:1
       },
       bottomText:{
-        fontSize:10,
+        fontSize:14,
         marginTop:12.5
       }
 })

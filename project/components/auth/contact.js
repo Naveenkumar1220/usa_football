@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         position:"absolute",
         top:-devHeight*0.55,
         marginTop:16,
-        marginLeft:17
+        marginLeft:11
       },
     textColor:{
       color:DEFAULT_WHITE,
